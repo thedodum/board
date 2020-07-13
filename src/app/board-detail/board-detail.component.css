@@ -1,0 +1,5 @@
+.lst_notice{width: 700px; border-top: 1px solid #666; table-layout: fixed;}
+.lst_notice tbody tr th{text-align: center; height:30px; border-bottom: 1px solid #ddd;
+  font-weight: 400; background-color: #eee}
+.lst_notice tbody tr td{text-align: center; height:30px; border-bottom: 1px solid #ddd;}
+.lst_notice tbody tr td:nth-child(2){text-align: left;}

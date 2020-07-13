@@ -1,0 +1,38 @@
+<div *ngIf="hero">
+  <h3>update</h3>
+
+  <form [formGroup]="updateForm" (ngSubmit)="updateForm.value">
+    <table class="lst_notice">
+      <colgroup>
+        <col width="100">
+        <col width="*">
+        <col width="100">
+        <col width="100">
+      </colgroup>
+      <tbody>
+      <tr>
+        <th>작성자</th>
+        <td>{{hero.name}}</td>
+        <th>날짜</th>
+        <td>{{hero.date}}</td>
+      </tr>
+      <tr>
+        <th>제목</th>
+        <td colspan="3"><input type="text" [(ngModel)]="hero.title" id="title" formControlName="title"></td>
+      </tr>
+      <tr>
+        <th>내용</th>
+        <td colspan="3"><textarea type="text" [(ngModel)]="hero.contents" id="contents" formControlName="contents"></textarea></td>
+      </tr>
+      <tr>
+        <th>파일</th>
+        <td colspan="3"><input type="file" id="uploadfile" formControlName="file"></td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
+
+  <button (click)="goBack()">back</button>
+  <button (click)="save()">save</button>
+
+</div>

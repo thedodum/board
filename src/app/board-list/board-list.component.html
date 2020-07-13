@@ -1,0 +1,54 @@
+<h3>list</h3>
+
+<!--
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button class="delete" title="delete hero"
+            (click)="delete(hero)">x</button>
+  </li>
+</ul>
+-->
+
+<table class="lst_notice">
+  <colgroup>
+    <col width="70">
+    <col width="*">
+    <col width="100">
+    <col width="100">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>제목</th>
+      <th>작성자</th>
+      <th>날짜</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hero of heroes | paginate: { itemsPerPage: count, currentPage: p }">
+      <td>{{hero.id}}</td>
+      <td><a routerLink="/detail/{{hero.id}}">{{hero.title}}</a></td>
+      <td>{{hero.name}}</td>
+      <td>{{hero.date}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--Including the pagination control.-->
+<div class="paging">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+<button routerLink="/boardwrite">write</button>
+
+<!--<div>
+  <label>Hero name:
+    <input #heroName />
+  </label>
+  <button (click)="add(heroName.value); heroName.value=''">
+    add
+  </button>
+</div>-->

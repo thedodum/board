@@ -1,0 +1,48 @@
+<!--<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>-->
+
+
+<div *ngIf="hero">
+  <h3>detail</h3>
+  <table class="lst_notice">
+    <colgroup>
+      <col width="100">
+      <col width="*">
+      <col width="100">
+      <col width="100">
+    </colgroup>
+    <tbody>
+    <tr>
+      <th>작성자</th>
+      <td>{{hero.name}}</td>
+      <th>날짜</th>
+      <td>{{hero.date}}</td>
+    </tr>
+    <tr>
+      <th>제목</th>
+      <td colspan="3">{{hero.title}}</td>
+    </tr>
+    <tr>
+      <th>내용</th>
+      <td colspan="3">{{hero.contents}}</td>
+    </tr>
+    <tr>
+      <th>파일</th>
+      <td colspan="3">{{hero.file}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button (click)="goBack()">back</button>
+  <button routerLink="/boardupdate/{{hero.id}}">edit</button>
+  <button class="delete" title="delete hero" (click)="delete(hero)">delete</button>
+</div>

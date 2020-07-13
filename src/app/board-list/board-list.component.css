@@ -1,0 +1,7 @@
+.lst_notice{width: 700px; border-top: 1px solid #ccc;}
+.lst_notice thead tr th{text-align: center; height:30px; border-bottom: 1px solid #ddd;
+  font-weight: 400;}
+.lst_notice tbody tr td{text-align: center; height:30px; border-bottom: 1px solid #ddd;}
+.lst_notice tbody tr td:nth-child(2){text-align: left;}
+
+.paging{margin-top: 20px; text-align: center;}
